@@ -1,0 +1,21 @@
+exercice 2:
+[wamster@wamster TP_OrganisationCode]$ tar -xzvf exo1\(1\).tar.gz
+
+[wamster@wamster exo1]$ make
+as -o lire.o lire.s
+gcc -Wall -ansi -pedantic -g   -c -o personne.o personne.c
+gcc -Wall -ansi -pedantic -g   -c -o repertoire.o repertoire.c
+gcc -Wall -ansi -pedantic -g   -c -o main.o main.c
+gcc -Wall -ansi -pedantic -g -o exo1 lire.o personne.o repertoire.o main.o
+
+[wamster@wamster exo1]$ make
+make: Nothing to be done for 'but'.
+
+Aucun changement n'a été effectué sur les scripts. donc make détecte qu'il n'y a rien besoin de compiler. Alors la deuxième fois qu'on lance make, il ne compile rien
+
+[wamster@wamster exo1]$ make
+gcc -Wall -ansi -pedantic -g   -c -o repertoire.o repertoire.c
+gcc -Wall -ansi -pedantic -g -o exo1 lire.o personne.o repertoire.o main.o
+
+[wamster@wamster exo1]$ gcc -MM main.c
+main.o: main.c personne.h repertoire.h

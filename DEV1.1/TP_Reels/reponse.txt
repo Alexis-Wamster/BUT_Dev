@@ -1,0 +1,9 @@
+printf("%f\n", 12345.678910111213);
+printf("%.12f\n", 12345.678910111213);
+printf("%.15f\n", 12345.678910111213);
+les résultat devienne aproximatif à cette échelle. il n'y a pas autant de chiffre après la virgule que ce que l'on souhaite
+
+l'opération % ne s'effectue qu'avec des entiers
+
+en c, on obtient la valeur vers laquelle tendent les résultats (infini)
+

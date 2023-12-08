@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Q5Main{
+    public static void main(String[] args) {
+	Color jaune = new Color(255,215,0);
+	JFrame fenetre = new JFrame("Degres");
+	fenetre.setSize(500, 300);
+	fenetre.setLocation(0, 0);
+        fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	fenetre.setBackground(jaune);
+
+	JTextField champsCelsius = new JTextField();
+	JLabel texteCelsius = new JLabel("C");
+	JPanel LigneCelsius = new JPanel();
+	champsCelsius.setPreferredSize(new Dimension(300,20));
+	LigneCelsius.add(champsCelsius);
+	LigneCelsius.add(texteCelsius);
+	LigneCelsius.setBackground(jaune);
+
+	JTextField champsFarenheit = new JTextField();
+	JLabel texteFarenheit = new JLabel("F");
+	JPanel LigneFarenheit = new JPanel();
+	champsFarenheit.setPreferredSize(new Dimension(300,20));
+	LigneFarenheit.add(champsFarenheit);
+	LigneFarenheit.add(texteFarenheit);
+	LigneFarenheit.setBackground(jaune);
+	
+	JPanel ensemble = new JPanel(new GridLayout(2,1));
+	ensemble.add(LigneCelsius);
+	ensemble.add(LigneFarenheit);
+	ensemble.setBackground(new Color(255,215,0));
+	fenetre.setBackground(jaune);
+
+	JPanel vide1 = new JPanel();
+	vide1.setBackground(jaune);
+	JPanel vide2 = new JPanel();
+	vide2.setBackground(jaune);
+	
+	GridLayout grille = new GridLayout(3,1);
+	fenetre.setLayout(grille);
+	fenetre.add(vide1);
+	fenetre.add(ensemble);
+	fenetre.add(vide2);
+
+	DetectConvertion convertionObserveur = new DetectConvertion(champsFarenheit, champsCelsius);
+	champsCelsius.addActionListener(convertionObserveur);
+
+	fenetre.setVisible(true);
+    }
+}

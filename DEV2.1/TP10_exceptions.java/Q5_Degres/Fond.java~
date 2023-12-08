@@ -1,0 +1,18 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Fond{
+    public static void main(String[] args) {
+	JButton boutonCyan = new JButton("Cyan");
+	JButton boutonMagenta = new JButton("Magenta");
+	JButton boutonJaune = new JButton("Jaune");
+	JButton[] boutonList = {boutonCyan,boutonMagenta,boutonJaune};
+	FondEvent fenetreClass = new FondEvent(boutonList);
+
+	fenetreClass.fenetre();
+
+	boutonCyan.addActionListener(fenetreClass);
+	boutonMagenta.addActionListener(fenetreClass);
+	boutonJaune.addActionListener(fenetreClass);
+    }
+}

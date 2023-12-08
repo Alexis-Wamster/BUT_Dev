@@ -1,0 +1,38 @@
+// Il faut compléter les questions par vos réponses ci-dessous.
+
+========================================================================================
+Question 1.
+Quelle est la sanction disciplinaire encourrue en cas de triche à un TP noté à l'IUT?
+
+Votre réponse : sans doute un 0/20
+
+
+
+
+========================================================================================
+Question 2.
+Quelles sont la ou les commandes nécessaires pour lancer les tests permettant de debuguer pour la première partie du TP?
+
+Votre réponse :
+CLASSPATH=".:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar"
+javac -cp $CLASSPATH <fichierTest.java>
+java -cp $CLASSPATH org.junit.runner.JUnitCore <fichierTest.class>
+
+
+
+========================================================================================
+Question 3.
+Comment puis-je tester si une méthode retourne une exception avec JUnit?
+
+Votre réponse :en mettant des parenthèse derrière le @Test, avec l'erreur que l'on souhaite que la méthode retourne. voici un exemple plus parlant:
+@Test(expected = NullPointerException.class)
+
+
+
+
+
+
+
+
+
+========================================================================================
